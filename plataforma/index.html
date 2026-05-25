@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detect IA - Controle de Produção</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo-left">Detect IA</div>
+
+    <div class="horario" id="horario">14/05/2026 10:45:40</div>
+
+    <div class="logo-right">INTELBRAS</div>
+  </header>
+
+  <!-- FLASH -->
+  <div id="flash" class="flash-overlay"></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-screen normal-bg" id="mainScreen">
+
+    <div class="center-content">
+      <h1 id="status">PEÇA APROVADA</h1>
+
+      <p class="linha-info" id="linhaInfo">
+        Linha TESTE · 14/05/2026, 10:45:40
+      </p>
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+
+    <button class="info-card clickable" onclick="abrirHistorico('all')">
+      <span class="label">TOTAL DE PEÇAS LIDAS</span>
+      <span class="value total" id="totalPecas">0</span>
+    </button>
+
+    <button class="info-card clickable" onclick="abrirHistorico('defect')">
+      <span class="label">PEÇAS COM DEFEITO</span>
+      <span class="value defect" id="defeitos">0</span>
+    </button>
+
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay hidden" id="modalOverlay">
+
+    <div class="modal">
+
+      <!-- HEADER -->
+      <div class="modal-header">
+
+        <div>
+          <h2 id="modalTitulo">Histórico</h2>
+          <p id="modalTotal">Total: 0 registros</p>
+        </div>
+
+        <button class="close-btn" onclick="fecharModal()">
+          ×
+        </button>
+
+      </div>
+
+      <!-- LISTA -->
+      <div class="modal-content" id="historicoLista">
+      </div>
+
+      <!-- FOOTER -->
+      <div class="modal-footer">
+
+        <div class="export-buttons">
+
+          <button class="btn export-csv" onclick="exportarCSV()">
+            Exportar CSV
+          </button>
+
+          <button class="btn export-pdf" onclick="window.print()">
+            Exportar PDF
+          </button>
+
+        </div>
+
+        <button class="btn close-modal" onclick="fecharModal()">
+          Fechar
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
