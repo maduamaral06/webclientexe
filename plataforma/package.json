@@ -5,6 +5,7 @@
   "main": "server.js",
   "bin": "server.js",
   "dependencies": {
+    "@mhoc/axios-digest-auth": "^0.8.0",
     "accepts": "^2.0.0",
     "body-parser": "^2.2.2",
     "bytes": "^3.1.2",
@@ -17,6 +18,7 @@
     "cors": "^2.8.6",
     "debug": "^4.4.3",
     "depd": "^2.0.0",
+    "digest-fetch": "^3.1.1",
     "dunder-proto": "^1.0.1",
     "ee-first": "^1.1.1",
     "encodeurl": "^2.0.0",
